@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-bg: #1A1C1E;
+  --color-form: #1F2123;
+  --color-bg-form: #2E343C;
+  --color-btn: #E17000;
+}
+
+body {
+  background-color: var(--color-main-bg);
+}
+
+.left-col {
+  background-image: url('./../public/bg-main.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.input-filed {
+  background-color: var(--color-bg-form);
+  width: 100%;
+  height: 40px;
+  padding-left: 40px;
+  border-radius: 6px;
+  outline: 0;
+  border: 2px solid transparent;
+  transition: .3s;
+}
+
+.input-filed:focus {
+  border: 2px solid var(--color-btn);
+}
+
+.icon {
+  color: grey;
+}
+
+.input-filed:focus + .icon {
+  color: var(--color-btn);
+}
+
+.input-filed.error {
+  border: 2px solid red;
+}

@@ -1,0 +1,20 @@
+import { Circles, MutatingDots, ThreeDots } from "react-loader-spinner"
+
+const Spinner = () => {
+  return (
+    <div className="flex justify-center">
+      <ThreeDots
+        visible={true}
+        height="40"
+        width="40"
+        color="#fff"
+        radius="9"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
+    </div>
+  )
+}
+
+export default Spinner
