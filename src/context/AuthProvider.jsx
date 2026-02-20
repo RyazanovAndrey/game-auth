@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { ROUTES } from "../route"
 
 const AuthContext = createContext(null)
 
@@ -46,7 +47,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('user')
     setUser(null)
-    navigate('/')
+    navigate(ROUTES.HOME)
   }
 
   return (
