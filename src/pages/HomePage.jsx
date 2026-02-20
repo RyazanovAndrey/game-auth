@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useAuth } from "../context/AuthProvider"
 import { useNavigate } from "react-router-dom"
 import Spinner from "../components/Spinner"
+import { ROUTES } from "../route"
 
 const HomePage = () => {
 
@@ -51,7 +52,7 @@ const HomePage = () => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-      navigate('/dashboard')
+      navigate(ROUTES.DASHBOARD)
     }, 3000)
   }
 
